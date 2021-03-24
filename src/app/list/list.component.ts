@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitiesListService } from '../services/cities-list.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ct: CitiesListService) { }
+
+  citiesCopy : any[] = [];
 
   ngOnInit(): void {
+    this.getCities();
+  }
+
+  addCity(form : any){
+    this.ct.addCities(form.value);
+    form.reset();
+  }
+
+  getCities(){
+    this.citiesCopy = this.ct.getCities();
+    console.log(this.citiesCopy)
   }
 
 }

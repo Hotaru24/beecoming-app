@@ -11,5 +11,5 @@ export class LineComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

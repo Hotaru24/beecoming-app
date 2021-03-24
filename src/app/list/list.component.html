@@ -1,1 +1,30 @@
-<p>list works!</p>
+
+<div *ngFor="let city of citiesCopy">
+  <h3>{{city.country}}</h3>
+</div>
+
+
+<form id="listForm" #f="ngForm" (submit)="addCity(f)">
+  <div class="listInputs">
+    <label for="country">Country</label>
+    <input type="text" ngModel name="country">
+  </div>
+  <div class="listInputs">
+    <label for="city">City</label>
+    <input type="text" ngModel name="city">    
+  </div>
+  <div class="listInputs">
+    <label for="population">Population</label>
+    <input type="text" ngModel name="population">    
+  </div>
+  <div class="listInputs">
+    <label for="language">Language</label>
+    <input type="text" ngModel name="language">    
+  </div>
+  <div class="listInputs">
+    <label for="currency">Currency</label>
+    <input type="text" ngModel name="currency">    
+  </div>
+  <button type="submit" (click)="getCities()">Add city</button>
+</form>
+
