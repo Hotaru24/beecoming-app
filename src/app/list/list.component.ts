@@ -23,7 +23,6 @@ export class ListComponent implements OnInit {
 
   getCities(){
     this.citiesCopy = this.ct.getCities();
-    console.log(this.citiesCopy)
   }
 
 }
