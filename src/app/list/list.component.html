@@ -1,7 +1,20 @@
+<table>
+  <tr>
+    <th>Country</th>
+    <th>City</th>
+    <th>Population</th>
+    <th>Language</th>
+    <th>Currency</th>
+  </tr>
+  <tr *ngFor="let city of citiesCopy">
+    <td>{{city.country}}</td>
+    <td>{{city.city}}</td>
+    <td>{{city.population}}</td>
+    <td>{{city.language}}</td>
+    <td>{{city.currency}}</td>
+  </tr>
+</table>
 
-<div *ngFor="let city of citiesCopy">
-  <h3>{{city.country}}</h3>
-</div>
 
 
 <form id="listForm" #f="ngForm" (submit)="addCity(f)">
@@ -24,6 +37,14 @@
   <div class="listInputs">
     <label for="currency">Currency</label>
     <input type="text" ngModel name="currency">    
+  </div>
+  <div class="listInputs">
+    <label for="latitude">latitude</label>
+    <input type="text" ngModel name="latitude">    
+  </div>
+  <div class="listInputs">
+    <label for="longitude">longitude</label>
+    <input type="text" ngModel name="longitude">    
   </div>
   <button type="submit" (click)="getCities()">Add city</button>
 </form>
