@@ -56,7 +56,7 @@ export class CitiesListService {
   ];
 
   addCities(form : any){
-    this.cities = [form, ...this.cities]
+    this.cities = [...this.cities, form]
     console.log(this.cities)
   }
 

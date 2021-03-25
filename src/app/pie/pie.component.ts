@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CitiesListService } from '../services/cities-list.service';
-
 import { Chart } from 'chart.js';
 
 @Component({
@@ -8,6 +7,7 @@ import { Chart } from 'chart.js';
   templateUrl: './pie.component.html',
   styleUrls: ['./pie.component.css']
 })
+
 export class PieComponent implements OnInit {
 
   constructor(public ct: CitiesListService) { }
