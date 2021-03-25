@@ -1,51 +1,55 @@
-<table>
-  <tr>
-    <th>Country</th>
-    <th>City</th>
-    <th>Population</th>
-    <th>Language</th>
-    <th>Currency</th>
-  </tr>
-  <tr *ngFor="let city of citiesCopy">
-    <td>{{city.country}}</td>
-    <td>{{city.city}}</td>
-    <td>{{city.population}}</td>
-    <td>{{city.language}}</td>
-    <td>{{city.currency}}</td>
-  </tr>
-</table>
+<div id="listBody">
+  <table>
+    <tr>
+      <th>Country</th>
+      <th>City</th>
+      <th>Population</th>
+      <th>Language</th>
+      <th>Currency</th>
+    </tr>
+    <tr *ngFor="let city of citiesCopy">
+      <td>{{city.country}}</td>
+      <td>{{city.city}}</td>
+      <td>{{city.population}}</td>
+      <td>{{city.language}}</td>
+      <td>{{city.currency}}</td>
+    </tr>
+  </table>
 
 
 
-<form id="listForm" #f="ngForm" (submit)="addCity(f)">
-  <div class="listInputs">
-    <label for="country">Country</label>
-    <input type="text" ngModel name="country">
-  </div>
-  <div class="listInputs">
-    <label for="city">City</label>
-    <input type="text" ngModel name="city">    
-  </div>
-  <div class="listInputs">
-    <label for="population">Population</label>
-    <input type="text" ngModel name="population">    
-  </div>
-  <div class="listInputs">
-    <label for="language">Language</label>
-    <input type="text" ngModel name="language">    
-  </div>
-  <div class="listInputs">
-    <label for="currency">Currency</label>
-    <input type="text" ngModel name="currency">    
-  </div>
-  <div class="listInputs">
-    <label for="latitude">latitude</label>
-    <input type="text" ngModel name="latitude">    
-  </div>
-  <div class="listInputs">
-    <label for="longitude">longitude</label>
-    <input type="text" ngModel name="longitude">    
-  </div>
-  <button type="submit" (click)="getCities()">Add city</button>
-</form>
+  <form id="listForm" #f="ngForm" (submit)="addCity(f)">
+    <div class="listInputs">
+      <label for="country">Country</label>
+      <input type="text" ngModel name="country">
+    </div>
+    <div class="listInputs">
+      <label for="city">City</label>
+      <input type="text" ngModel name="city">    
+    </div>
+    <div class="listInputs">
+      <label for="population">Population</label>
+      <input type="text" ngModel name="population">    
+    </div>
+    <div class="listInputs">
+      <label for="language">Language</label>
+      <input type="text" ngModel name="language">    
+    </div>
+    <div class="listInputs">
+      <label for="currency">Currency</label>
+      <input type="text" ngModel name="currency">    
+    </div>
+    <div class="listInputs">
+      <label for="latitude">latitude</label>
+      <input type="text" ngModel name="latitude">    
+    </div>
+    <div class="listInputs">
+      <label for="longitude">longitude</label>
+      <input type="text" ngModel name="longitude">    
+    </div>
+    <button type="submit" (click)="getCities()">Add city</button>
+  </form>
+</div>
+
+
 
